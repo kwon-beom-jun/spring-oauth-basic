@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>OAuth2 Login with Google</title>
+</head>
+<script>
+function handleGoogleLogin () {
+	
+    // 이 값들은 Google Developer Console에서 애플리케이션을 등록할 때 얻을 수 있습니다.
+    const redirectUri = '[[${redirectUrl}]]'; // 예: http://localhost:8080/callback
+    const clientId = '[[${clientId}]]';
+    const scope = '[[${scope}]]';
+    const responseType = 'code';
+    const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scope}&response_type=${responseType}`;
+
+    console.log(authUrl);
+    
+    // 사용자를 Google OAuth2 인증 페이지로 리다이렉트합니다.
+    window.location.href = authUrl;
+};
+
+</script>
+<body>
+    <button onclick="handleGoogleLogin()" id="loginWithGoogle">Login with Google</button>
+</body>
+</html>

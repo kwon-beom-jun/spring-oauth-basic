@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>OAuth2 Login with Google</title>
+</head>
+<body>
+	<h1>Google User Info</h1>
+    <div th:each="entry : ${GoogleUserInfo}">
+        <!-- <span th:text="|${entry.key} : ${entry.value}|"></span><br/> -->
+        <span th:text="${entry.key + ' : ' + entry.value}"></span><br/>
+    </div>
+</body>
+</html>

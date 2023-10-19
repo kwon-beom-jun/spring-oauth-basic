@@ -1,4 +1,4 @@
-# SpringBoot를 이용하여 OAuth 기능 구현
+# OAuth 기능 구현
 
 <br/>
 
